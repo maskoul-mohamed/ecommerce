@@ -1,0 +1,33 @@
+/* 
+.hero-slider {
+    background-color: #F2F0FF;
+} */
+/* .subtitle-hero {
+    color: #fb2e86 ;
+    font-weight: 600;
+    font-family: sans-serif;
+} */
+
+/* .lead {
+    color: #8A8FB9;
+    font-weight: bold;
+    font-size: 16;
+} */
+
+.carousel-indicators button {
+    background-color: #fb2e86 !important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("../../../assets/icons/left-arrow.svg") !important;
+    filter: none !important;
+    width: 2rem;
+    height: 4rem;
+}
+
+.carousel-control-next-icon {
+    background-image: url("../../../assets/icons/right-arrow.svg") !important;
+    filter: none !important;
+    width: 2rem;
+    height: 4rem;
+}

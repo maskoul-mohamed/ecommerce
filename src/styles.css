@@ -127,20 +127,20 @@ body {
 }
 
 /* promotional */
-.promotion {
-    background-color:  #F2F0FF;
-}
+    /* .promotion {
+        background-color:  #F2F0FF;
+    } */
 .img-bg-promo{
     position: absolute;
 }
 
-.owl-carousel{
+/* .owl-carousel{
     padding-top: 40px;
     padding-bottom: 30px;
-}
-.promo-slogan{
+} */
+/* .promo-slogan{
     padding-top: 163px;
-}
+} */
 .promo-title {
     font-size: 53px;
     line-height: 82px;

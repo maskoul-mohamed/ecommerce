@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home/home.component';
-import { HeaderComponent } from './header/header/header.component';
-import { NavComponent } from './nav/nav/nav.component';
-import { HeroSectionComponent } from './hero-section/hero-section/hero-section.component';
+import { HomeComponent } from './component/home/home.component';
+import { HeaderComponent } from './component/header/header.component';
+import { NavComponent } from './component/nav/nav.component';
+import { HeroSectionComponent } from './component/hero-section/hero-section.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { HeroSectionComponent } from './hero-section/hero-section/hero-section.c
     HomeComponent,
     HeaderComponent,
     NavComponent,
-    HeroSectionComponent
+    HeroSectionComponent,
   ],
   imports: [
     BrowserModule,
