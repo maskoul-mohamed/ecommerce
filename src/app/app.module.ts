@@ -11,6 +11,8 @@ import { LeatestProductsComponent } from './component/leatest-products/leatest-p
 import { ShopLiftPageComponent } from './component/shop-lift-page/shop-lift-page.component';
 import { PageHeaderComponent } from './component/page-header/page-header.component';
 import { TopNavFillterComponent } from './component/top-nav-fillter/top-nav-fillter.component';
+import { LeftSideFiltterComponent } from './component/left-side-filtter/left-side-filtter.component';
+import { DiscountFilterComponent } from './component/discount-filter/discount-filter.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { TopNavFillterComponent } from './component/top-nav-fillter/top-nav-fill
     ShopLiftPageComponent,
     PageHeaderComponent,
     TopNavFillterComponent,
+    LeftSideFiltterComponent,
+    DiscountFilterComponent,
   ],
   imports: [
     BrowserModule,
