@@ -10,6 +10,7 @@ import { HeroSectionComponent } from './component/hero-section/hero-section.comp
 import { LeatestProductsComponent } from './component/leatest-products/leatest-products.component';
 import { ShopLiftPageComponent } from './component/shop-lift-page/shop-lift-page.component';
 import { PageHeaderComponent } from './component/page-header/page-header.component';
+import { TopNavFillterComponent } from './component/top-nav-fillter/top-nav-fillter.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PageHeaderComponent } from './component/page-header/page-header.compone
     LeatestProductsComponent,
     ShopLiftPageComponent,
     PageHeaderComponent,
+    TopNavFillterComponent,
   ],
   imports: [
     BrowserModule,
