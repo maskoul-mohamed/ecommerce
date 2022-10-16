@@ -15,6 +15,14 @@ export class ProductService {
       map(data => data.products)
     )
   }
+
+  getLimitProducts(limit: number):Observable<Products[] | any>{
+    return this.httpClient.get<Products[] | any>(`https://dummyjson.com/products?limit=${limit}`).pipe(
+      map(data => data.products)
+    )
+  }
+
+
   getAllCategories():Observable<any> {
     return this.httpClient.get<Products[] | any>('https://dummyjson.com/products/categories')
   } 

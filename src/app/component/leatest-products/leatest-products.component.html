@@ -29,7 +29,7 @@
                 <div class="tab-pane fade show active" id="pills-newarrival" role="tabpanel" 
                 aria-labelledby="pills-newarrival-tab">
                     <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div *ngFor="let product of limitProducts" class="col-xl-4 col-lg-4 col-md-4">
                             <div class="single-product-item card">
                                 <div class="option-product">
                                     <ul class="option-product-hover">
@@ -46,17 +46,17 @@
                                 </div>
                                 <div class="card-img-top">
                                     <a href="#" >
-                                        <img src="./assets/images/image 1166.png" alt="">
+                                        <img class="image-product" src={{product.thumbnail}} alt="">
                                     </a>
                                     <!-- <div class="p-status text-center">Sale</div> -->
                                 </div>
 
                                 <div class="card-body product-info d-flex">
-                                    <div class="product-name">Comfort Handy Craft</div>
+                                    <div class="product-name">{{product.title}}</div>
                                     
                                     <div class="product-price">
-                                        <span class="discount-price">$42.00</span>
-                                        <span class="initial-price text-decoration-line-through">$65.00</span>
+                                        <span class="discount-price">${{calculDescountPrice(product.price, product.discountPercentage)}}</span>
+                                        <span class="initial-price text-decoration-line-through">${{product.price}}</span>
                                     </div>
                                 </div>
                                 <hr class="line-product-name">
