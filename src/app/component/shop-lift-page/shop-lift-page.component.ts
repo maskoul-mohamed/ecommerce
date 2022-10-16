@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
 import { Products } from 'src/app/interface/products.interface';
 import { ProductService } from 'src/app/service/product.service';
 
@@ -8,10 +8,13 @@ import { ProductService } from 'src/app/service/product.service';
   templateUrl: './shop-lift-page.component.html',
   styleUrls: ['./shop-lift-page.component.css']
 })
-export class ShopLiftPageComponent implements OnInit {
+export class ShopLiftPageComponent implements OnInit,OnDestroy {
 
   productsList:Products | any;
   categories:any;
+
+  productsListSubscription: Subscription | undefined;
+  categoriesSubseription :Subscription | undefined;
 
   constructor(private productService: ProductService) { }
 
@@ -20,9 +23,13 @@ export class ShopLiftPageComponent implements OnInit {
    this.getAllProducts()
    this.getCategories()
   }
+  ngOnDestroy(): void {
+    this.productsListSubscription?.unsubscribe();
+    this.categoriesSubseription?.unsubscribe();
+  }
 
   getAllProducts(){
-    this.productService.getAllProduct().subscribe(
+    this.productsListSubscription = this.productService.getAllProduct().subscribe(
       (data : Products) => {
         this.productsList = data
         console.log(this.productsList)
@@ -32,7 +39,7 @@ export class ShopLiftPageComponent implements OnInit {
   }
 
   getCategories(){
-    this.productService.getAllCategories().subscribe((data: any) => {
+   this.categoriesSubseription =  this.productService.getAllCategories().subscribe((data: any) => {
       this.categories = data
     })
   }

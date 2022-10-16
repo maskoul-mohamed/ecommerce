@@ -14,6 +14,7 @@ import { PageHeaderComponent } from './component/page-header/page-header.compone
 import { TopNavFillterComponent } from './component/top-nav-fillter/top-nav-fillter.component';
 import { LeftSideFiltterComponent } from './component/left-side-filtter/left-side-filtter.component';
 import { DiscountFilterComponent } from './component/discount-filter/discount-filter.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DiscountFilterComponent } from './component/discount-filter/discount-fi
     TopNavFillterComponent,
     LeftSideFiltterComponent,
     DiscountFilterComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
