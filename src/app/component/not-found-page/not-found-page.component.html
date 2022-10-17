@@ -1,0 +1,23 @@
+<app-nav></app-nav>
+<section class="breadcrumb-page">
+    <div class="container">
+        <h2 class="title-page">404 Not Found Page</h2>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a routerLink="shop-left-sidebar.html">404 Not Found Pag</a></li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+
+<!-- 404 error message -->
+<section class="error-message">
+    <img src="assets/images/notFoundImg.png" alt="error image">
+    <h2 class="main-header-text">oops! The page you requested was not found!</h2>
+    <button class="btn btn-shopping-now" routerLink="">Back To Home</button>
+</section>
+<app-footer></app-footer>
+
+<router-outlet></router-outlet>
