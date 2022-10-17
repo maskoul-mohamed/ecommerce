@@ -28,6 +28,8 @@ export class ProductService {
   } 
 
   getProductByCategory(category: any):Observable<any> {
-    return this.httpClient.get<Products[] | any>('https://dummyjson.com/products/category/' + category)
+    return this.httpClient.get<Products[] | any>('https://dummyjson.com/products/category/' + category).pipe(
+      map(data => data.products)
+    )
   } 
 }

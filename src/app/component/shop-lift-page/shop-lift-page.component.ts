@@ -8,44 +8,55 @@ import { ProductService } from 'src/app/service/product.service';
   templateUrl: './shop-lift-page.component.html',
   styleUrls: ['./shop-lift-page.component.css']
 })
-export class ShopLiftPageComponent implements OnInit,OnDestroy {
+export class ShopLiftPageComponent implements OnInit, OnDestroy {
 
-  productsList:Products | any;
-  categories:any;
+  productsList: Products | any;
+  categories: any;
 
   productsListSubscription: Subscription | undefined;
-  categoriesSubseription :Subscription | undefined;
+  categoriesSubseription: Subscription | undefined;
 
   constructor(private productService: ProductService) { }
 
 
   ngOnInit(): void {
-   this.getAllProducts()
-   this.getCategories()
+    this.getAllProducts()
+    this.getCategories()
   }
   ngOnDestroy(): void {
     this.productsListSubscription?.unsubscribe();
     this.categoriesSubseription?.unsubscribe();
   }
 
-  getAllProducts(){
-    this.productsListSubscription = this.productService.getAllProduct().subscribe(
-      (data : Products) => {
-        this.productsList = data
-        console.log(this.productsList)
 
+  calculDescountPrice(price: number, discountAmount: number) {
+    return Math.round(price - (price * discountAmount / 100));
+  }
+
+  calcNumberOfStars(numberOfStars: number) {
+    let numberOfStarsRounded = Math.round(numberOfStars);
+    let stars = []
+    for (let index = 0; index < numberOfStarsRounded; index++) {
+      stars.push('1')
+    }
+    return stars;
+  }
+  getAllProducts() {
+    this.productsListSubscription = this.productService.getAllProduct().subscribe(
+      (data: Products) => {
+        this.productsList = data
       }
     )
   }
 
-  getCategories(){
-   this.categoriesSubseription =  this.productService.getAllCategories().subscribe((data: any) => {
+  getCategories() {
+    this.categoriesSubseription = this.productService.getAllCategories().subscribe((data: any) => {
       this.categories = data
     })
   }
-  onChange(e: any){
+  onChange(e: any) {
     let value = e.target.value;
-    if(value == "all"){
+    if (value == "all") {
       this.getAllProducts()
     }
     else {
@@ -53,11 +64,10 @@ export class ShopLiftPageComponent implements OnInit,OnDestroy {
     }
   }
 
-  getProductByCategory(category:string){
+  getProductByCategory(category: string) {
     this.productService.getProductByCategory(category).subscribe(
-      (data : Products) => {
+      (data: Products) => {
         this.productsList = data
-        console.log(this.productsList)
 
       }
     )
