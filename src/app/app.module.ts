@@ -16,6 +16,7 @@ import { LeftSideFiltterComponent } from './component/left-side-filtter/left-sid
 import { DiscountFilterComponent } from './component/discount-filter/discount-filter.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { NotFoundPageComponent } from './component/not-found-page/not-found-page.component';
+import { LogInPageComponent } from './component/log-in-page/log-in-page.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NotFoundPageComponent } from './component/not-found-page/not-found-page
     DiscountFilterComponent,
     FooterComponent,
     NotFoundPageComponent,
+    LogInPageComponent,
   ],
   imports: [
     BrowserModule,
