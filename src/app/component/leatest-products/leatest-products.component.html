@@ -34,25 +34,25 @@
                                 <div class="option-product">
                                     <ul class="option-product-hover">
                                         <li class="navigation-link">
-                                            <a href="" title="Add to Cart"><span class="iconify" data-icon="fluent:cart-24-regular" data-width="20"></span></a>
+                                            <a routerLink="" title="Add to Cart"><span class="iconify" data-icon="fluent:cart-24-regular" data-width="20"></span></a>
                                         </li>
                                         <li class="navigation-link">
-                                            <a href="" title="Wish List"><span class="iconify" data-icon="uil:heart-alt" data-width="18"></span></a>
+                                            <a routerLink="" title="Wish List"><span class="iconify" data-icon="uil:heart-alt" data-width="18"></span></a>
                                         </li>
                                         <li class="navigation-link">
-                                            <a href=""><span class="iconify" data-icon="uil:search-plus" data-width="18"></span></a>
+                                            <a [routerLink]="['/products', product.id]" ><span class="iconify" data-icon="uil:search-plus" data-width="18"></span></a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="card-img-top">
-                                    <a href="#" >
+                                    <a [routerLink]="['/products', product.id]" >
                                         <img class="image-product" src={{product.thumbnail}} alt="">
                                     </a>
                                     <!-- <div class="p-status text-center">Sale</div> -->
                                 </div>
 
                                 <div class="card-body product-info d-flex">
-                                    <div class="product-name">{{product.title}}</div>
+                                    <div  class="product-name">{{product.title}}</div>
                                     
                                     <div class="product-price">
                                         <span class="discount-price">${{calculDescountPrice(product.price, product.discountPercentage)}}</span>

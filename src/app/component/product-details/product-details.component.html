@@ -1,0 +1,70 @@
+<app-header></app-header>
+<app-nav></app-nav>
+
+
+<section class="breadcrumb-page">
+    <div class="container">
+        <h2 class="title-page">Product Details</h2>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a routerLink="product-details.html">Product Details</a></li>
+            </ol>
+        </nav>
+    </div>
+</section>
+<div class="product__item">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-7 col-md-12">
+                <div class="product__images d-flex">
+                    <div class="slider-nav">
+                        <div>
+                            <img src={{product.images[0]}}>
+                        </div>
+                        <div>
+                            <img src={{product.images[1]}}>
+                        </div>
+                        <div>
+                            <img src={{product.images[2]}}>
+                        </div>
+                    </div>
+                    <div class="slider-for">
+                        <div>
+                            <img src={{product.images[3]}}>
+                        </div>
+               
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-5 col-md-12">
+                <div class="product__info">
+                    <h2 class="product__name">{{product.title}}</h2>
+                    <div class="product__item__rating d-flex">
+                        <span *ngFor="let s of calcNumberOfStars(product.rating)" class="iconify rating-color" data-icon="ant-design:star-filled"></span>
+                        
+                    </div>
+                    <div class="product__price">
+                        <span>${{calculDescountPrice(product.price, product.discountPercentage)}}</span>
+                        <span class="text-decoration-line-through">${{product.price}}</span>
+                    </div>
+                    <p class="product__desc">{{product.description}}</p>
+                    <button class="btn btn-addToCart">Add To Cart</button>
+                    <button class="btn btn-wishlist" onclick="addWishList()"><span id="addWishList" class="iconify" data-icon="uil:heart-alt"></span></button>
+                    <p>Categories:</p> {{product.category}}
+                    <div class="share-social d-flex">
+                        <p>Share</p>
+                        <a routerLink="#" title="Facebook"><span class="iconify" data-icon="bxl:facebook"></span></a>
+                        <a routerLink="#" title="Instagram"><span class="iconify" data-icon="bxl:instagram-alt"></span></a>
+                        <a routerLink="#" title="Twitter"><span class="iconify" data-icon="akar-icons:twitter-fill"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>
+<router-outlet></router-outlet>

@@ -17,6 +17,7 @@ import { DiscountFilterComponent } from './component/discount-filter/discount-fi
 import { FooterComponent } from './component/footer/footer.component';
 import { NotFoundPageComponent } from './component/not-found-page/not-found-page.component';
 import { LogInPageComponent } from './component/log-in-page/log-in-page.component';
+import { ProductDetailsComponent } from './component/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { LogInPageComponent } from './component/log-in-page/log-in-page.componen
     FooterComponent,
     NotFoundPageComponent,
     LogInPageComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,
