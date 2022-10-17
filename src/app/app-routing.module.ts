@@ -7,8 +7,8 @@ import { ProductDetailsComponent } from './component/product-details/product-det
 import { ShopLiftPageComponent } from './component/shop-lift-page/shop-lift-page.component';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent},
-  {path:'shope', component: ShopLiftPageComponent},
+  {path:'', component: HomeComponent ,pathMatch: 'full'},
+  {path:'shope', component: ShopLiftPageComponent, pathMatch: 'full'},
   {path:'login', component: LogInPageComponent},
   {path:'products/:id', component: ProductDetailsComponent},
   {path:'**', component: NotFoundPageComponent},
